@@ -7,10 +7,23 @@ from random import randint
 
 letters = "abcdefghijklmnopqrstuvwxyz"
 numbers = "1234567890"
-specials = "!@#$%^&*?~_+-="
+specials = "!@#$%^&*?~_+-=."
 options = letters+numbers+specials
 
-length = int(input("How long of a password do you want? "))
+length = 0
+while length < 4:
+    temp = input("How long of a password do you want?  Use an integer >= 4.")
+    # catch entry of a character
+    try:
+        tempFloat = float(temp)
+    except ValueError:
+        continue
+    # catch entry of a float (except for n.0, which is allowed)
+    if int(tempFloat) != tempFloat:
+        length = 0
+        continue
+    else:
+        length = int(tempFloat)
 
 while True:
     pw = []
@@ -25,6 +38,5 @@ while True:
         result = "".join(pw)
         if result != result.lower() and result != result.upper():
             break
-# while
 
 print(result)
