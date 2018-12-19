@@ -8,4 +8,4 @@ The user inputs an integer password length, and a strong password is generated. 
 3) Must contain at least one number
 4) Must contain at least one special character
 
-...hence the minimum length of 4 characters.  The allowable letters, numbers, and special characters are defined on lines 8-11.
+...hence the minimum length of 4 characters.  The allowable letters, numbers, and special characters are defined on lines 8-10.
