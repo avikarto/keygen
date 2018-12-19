@@ -11,8 +11,8 @@ specials = "!@#$%^&*?~_+-=."
 options = letters+numbers+specials
 
 length = 0
-while length < 4:
-    temp = input("How long of a password do you want?  Use an integer >= 4.")
+while length < 16:
+    temp = input("How long of a password do you want?  Use an integer >= 16.")
     # catch entry of a character
     try:
         tempFloat = float(temp)
